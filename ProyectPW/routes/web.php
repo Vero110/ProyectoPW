@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\proyectoPW;
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +16,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', [proyectoPW::class, 'Login'])->name('apodoLogin');
+Route::get('/registroproductos', [proyectoPW::class, 'RegistroProducto'])->name('apodoRP');
+Route::get('/consultaproductos', [proyectoPW::class, 'ConsultaProductos'])->name('apodoCP');
+
+
+
+
+#ruta post del boton para ingresar.. login 
+Route::post('/Guardar',[proyectoPW::class, 'Guardar'])->name('apodoIngresar');
+
+#ruta post del boton de el registro. registrar productos
+Route::post('/RegistrarP',[proyectoPW::class, 'RegistrarProducto'])->name('apodoRP');
+
+
+Route::get('/ralmacen', function () {
+    return view('almacen');
 });
+
