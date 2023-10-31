@@ -13,7 +13,7 @@
                 <div class="card-body">
                     <ul class="list-group">
                         <a href="/registroproductos" class="list-group-item list-group-item-action">Registro Producto</a>
-                        <a href="#" class="list-group-item list-group-item-action">Editar Producto</a>
+                        <a href="editarproducto" class="list-group-item list-group-item-action">Editar Producto</a>
                         <a href="consultaproductos" class="list-group-item list-group-item-action">Consultar Todos los Productos</a>
                     </ul>
                 </div>

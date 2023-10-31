@@ -19,7 +19,13 @@ use App\Http\Controllers\proyectoPW;
 Route::get('/', [proyectoPW::class, 'Login'])->name('apodoLogin');
 Route::get('/registroproductos', [proyectoPW::class, 'RegistroProducto'])->name('apodoRP');
 Route::get('/consultaproductos', [proyectoPW::class, 'ConsultaProductos'])->name('apodoCP');
+Route::get('/editarproducto', [proyectoPW::class, 'EditarProducto'])->name('apodoEditar');
+Route::get('/agregarproveedor', [proyectoPW::class, 'AgregarProveedor'])->name('apodoAgregarProveedor');
 
+
+Route::get('/ralmacen', function () {
+    return view('almacen');
+});
 
 
 
@@ -29,8 +35,12 @@ Route::post('/Guardar',[proyectoPW::class, 'Guardar'])->name('apodoIngresar');
 #ruta post del boton de el registro. registrar productos
 Route::post('/RegistrarP',[proyectoPW::class, 'RegistrarProducto'])->name('apodoRP');
 
+#boton para guardar los cambios editados
+Route::post('/EditarP',[proyectoPW::class, 'EditaProducto'])->name('apodoIngresar');
 
-Route::get('/ralmacen', function () {
-    return view('almacen');
-});
+#boton para agregar nuevo proveedor
+Route::post('/Agregarproveedor',[proyectoPW::class, 'AgregarProveedor'])->name('apodoAgregarProvedor');
+
+
+
 

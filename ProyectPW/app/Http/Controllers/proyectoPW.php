@@ -20,6 +20,14 @@ class proyectoPW extends Controller
     public function ConsultaProductos(){
         return view('consultaProductos');
     }
+    public function EditarProducto(){
+        return view('editarProducto');
+    }
+
+    public function AgregarProveedor(){
+        return view('registrarProveedores');
+    }
+
 
     #boton para iniciar sesion
     public function Guardar(){
@@ -32,5 +40,18 @@ class proyectoPW extends Controller
         session()->flash('confirmacion', $nombreproducto);
         return redirect('/registroproductos');
     }   
+
+    #boton para la edicion de un producto
+    public function EditaProducto(validadorPW $req){
+        $nproducto = $req->input('txtN'); 
+        session()->flash('exitoso', $nproducto);
+        return redirect('/editarproducto');
+    } 
+
+    #boton para registrar proveedor
+    public function RegistrarProveedor(){
+        return redirect('/agregarproveedor')->with('confirmacion','Se ha registrado un nuevo proveedor');
+    }
+
  }
 
