@@ -28,6 +28,14 @@ class proyectoPW extends Controller
         return view('registrarProveedores');
     }
 
+    public function metodoOrden_Compra() {
+        return view('orden_compra');
+    }
+
+    public function metodoVentas() {
+        return view('ventas');
+    }
+
 
     #boton para iniciar sesion
     public function Guardar(){

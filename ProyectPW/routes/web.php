@@ -21,7 +21,25 @@ Route::get('/registroproductos', [proyectoPW::class, 'RegistroProducto'])->name(
 Route::get('/consultaproductos', [proyectoPW::class, 'ConsultaProductos'])->name('apodoCP');
 Route::get('/editarproducto', [proyectoPW::class, 'EditarProducto'])->name('apodoEditar');
 Route::get('/agregarproveedor', [proyectoPW::class, 'AgregarProveedor'])->name('apodoAgregarProveedor');
+Route::get('/ordencompra', [proyectoPW::class, 'metodoOrden_Compra'])->name('apodoorden');
+Route::get('/ventas', [proyectoPW::class, 'metodoVentas'])->name('apodoventas');
 
+
+Route::get('/consultaxnombreProductos', function () {
+    return view('consultaxNombreProductos');
+});
+
+Route::get('/editarproveedor', function () {
+    return view('editarProveedor');
+});
+
+Route::get('/consultaproveedores', function () {
+    return view('consultarProveedor');
+});
+
+Route::get('/consultaxnombreProveedores', function () {
+    return view('consultaxNombreProveedores');
+});
 
 Route::get('/ralmacen', function () {
     return view('almacen');
