@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\controllerPW;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +14,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/ordencompra', [controllerPW::class, 'metodoOrden_Compra'])->name('apodoorden');
+
+Route::get('/', [controllerPW::class, 'metodoWelcome'])->name('apodowelcome');
+
+Route::get('/ventas', [controllerPW::class, 'metodoVentas'])->name('apodoventas');
+
+Route::get('/reportes-y-graficas', [controllerPW::class, 'metodoReportesGraficas'])->name('apodoreportesG');
