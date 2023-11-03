@@ -36,8 +36,8 @@
             Usuarios
           </a>
          <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Registrar</a>
-          <a class="dropdown-item" href="#">Editar</a>
+          <a class="dropdown-item" href="registrousuario">Registrar</a>
+          <a class="dropdown-item" href="editarusuarios">Editar</a>
           <a class="dropdown-item" href="#">Consultar</a>
           <a class="dropdown-item" href="#">Consultar por nombre</a>
         </div>
@@ -49,7 +49,7 @@
          <div class="dropdown-menu">
           <a class="dropdown-item" href="#">Ganancias por mes</a>
           <a class="dropdown-item" href="#">Reportes de la empresa</a>
-          <a class="dropdown-item" href="#">Reportes y gráficas de compras y ventas</a>
+          <a class="dropdown-item" href="/reportes-y-graficas">Reportes y gráficas de compras y ventas</a>
         </div>
     </li>
   </ul>

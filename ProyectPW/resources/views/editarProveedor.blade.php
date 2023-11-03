@@ -30,7 +30,7 @@
                     <form method="POST" action="Agregarproveedor">
                         @csrf
                         <div class="card-body">
-                            <h2 class="card-text text-center">Agregar un nuevo Proveedor:</h2>
+                            <h2 class="card-text text-center">Editar proveedor:</h2>
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre:</label>
                                 <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}" required>

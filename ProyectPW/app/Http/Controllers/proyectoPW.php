@@ -36,6 +36,10 @@ class proyectoPW extends Controller
         return view('ventas');
     }
 
+    public function metodoReportesGraficas() {
+        return view('reportes_graficas');
+    }
+
 
     #boton para iniciar sesion
     public function Guardar(){

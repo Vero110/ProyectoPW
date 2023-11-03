@@ -23,7 +23,7 @@ Route::get('/editarproducto', [proyectoPW::class, 'EditarProducto'])->name('apod
 Route::get('/agregarproveedor', [proyectoPW::class, 'AgregarProveedor'])->name('apodoAgregarProveedor');
 Route::get('/ordencompra', [proyectoPW::class, 'metodoOrden_Compra'])->name('apodoorden');
 Route::get('/ventas', [proyectoPW::class, 'metodoVentas'])->name('apodoventas');
-
+Route::get('/reportes-y-graficas', [proyectoPW::class, 'metodoReportesGraficas'])->name('apodoreportesG');
 
 Route::get('/consultaxnombreProductos', function () {
     return view('consultaxNombreProductos');
@@ -45,6 +45,13 @@ Route::get('/ralmacen', function () {
     return view('almacen');
 });
 
+Route::get('/registrousuario', function () {
+    return view('registrarUsuario');
+});
+
+Route::get('/editarusuarios', function () {
+    return view('editarUsuario');
+});
 
 
 #ruta post del boton para ingresar.. login 
@@ -59,6 +66,7 @@ Route::post('/EditarP',[proyectoPW::class, 'EditaProducto'])->name('apodoIngresa
 #boton para agregar nuevo proveedor
 Route::post('/Agregarproveedor',[proyectoPW::class, 'AgregarProveedor'])->name('apodoAgregarProvedor');
 
+#boton para registrar usuarios 
 
 
 
