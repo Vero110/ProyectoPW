@@ -14,6 +14,7 @@ class proyectoPW extends Controller
     public function Almacen(){
         return view('almacen');
     }
+    #funciones Productos
     public function RegistroProducto(){
         return view('registrarProductos');
     }
@@ -23,11 +24,29 @@ class proyectoPW extends Controller
     public function EditarProducto(){
         return view('editarProducto');
     }
+    public function consultaxNombreProductos() {
+        return view('consultaxNombreProductos');
+    }
 
+    #funciones Proveedor
     public function AgregarProveedor(){
         return view('registrarProveedores');
     }
+    public function EditarProveedor(){
+        return view('editarProveedor');
+    }
+    public function ConsultaProveedor(){
+        return view('consultarProveedor');
+    }
+    public function ConsultaXNombreProveedor(){
+        return view('consultaxNombreProveedores');
+    }
+    
+    #funciones usuario
 
+
+
+    #funciones
     public function metodoOrden_Compra() {
         return view('orden_compra');
     }
@@ -40,6 +59,25 @@ class proyectoPW extends Controller
         return view('reportes_graficas');
     }
 
+    public function metodoWelcomeCompras() {
+        return view('welcome_compras');
+    }
+
+    public function metodoWelcomeVentas() {
+        return view('welcome_ventas');
+    }
+
+    public function metodoWelcomeGerencia() {
+        return view('welcome_gerencia');
+    }
+
+    public function metodoWelcomeAlmacen() {
+        return view('welcome_almacen');
+    }
+
+
+
+    
 
     #boton para iniciar sesion
     public function Guardar(){
@@ -60,10 +98,14 @@ class proyectoPW extends Controller
         return redirect('/editarproducto');
     } 
 
-    #boton para registrar proveedor
-    public function RegistrarProveedor(){
-        return redirect('/agregarproveedor')->with('confirmacion','Se ha registrado un nuevo proveedor');
-    }
+    public function RegistrarProveedor(validadorPW $req){
+        $nproveedor = $req->input('txtNombre'); 
+        session()->flash('exitoso', $nproveedor);
+        return redirect('/agregarproveedor');
+    } 
+    
+
+
 
  }
 

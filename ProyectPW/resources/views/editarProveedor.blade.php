@@ -1,33 +1,33 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'Editar Proveedores')
+@section('titulo', '')
 
 @section('Contenido')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <h1 class="text-center text-info fst-italic fw-bold">Editar Proveedores</h1>
     <div class="container mt-5">
-        <script>
-            @if(session()->has('confirmacion'))
-            
-              Swal.fire({
-                icon:'success',
-                title: 'Has iniciado sesión correctamente',
-                showConfirmButton: false,
-                timer: 1500
-            })
+            <script>
+                @if(session()->has('confirmacion'))
+                
+                Swal.fire({
+                    icon:'success',
+                    title: 'Se han guardado los cambios',
+                    showConfirmButton: false,
+                    timer: 1500
+                })
 
-            @php
-                session()->forget('confirmacion');
-            @endphp
-            
-            @endif
-          </script>
+                @php
+                    session()->forget('confirmacion');
+                @endphp
+                
+                @endif
+            </script>
           
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="Agregarproveedor">
+                    <form method="POST" action="EditarProve">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Editar proveedor:</h2>

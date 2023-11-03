@@ -9,6 +9,24 @@
     <li class="nav-item">
         <a class="nav-link actived" href="/ventas">Ventas</a>
       </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Consultar Compras
+          </a>
+       <div class="dropdown-menu">
+        <a class="dropdown-item" href="">Compras</a>
+    </li>
+
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Consultar Ventas
+        </a>
+     <div class="dropdown-menu">
+      <a class="dropdown-item" href="">Ventas</a>
+       </div>
+  </li>
+
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Productos

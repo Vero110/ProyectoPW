@@ -12,7 +12,7 @@
             
               Swal.fire({
                 icon:'success',
-                title: 'Has iniciado sesión correctamente',
+                title: 'Se ha agregado un nuevo Proveedor',
                 showConfirmButton: false,
                 timer: 1500
             })
@@ -27,7 +27,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="Agregarproveedor">
+                    <form method="POST" action="RegistrarProv">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Agregar un nuevo Proveedor:</h2>

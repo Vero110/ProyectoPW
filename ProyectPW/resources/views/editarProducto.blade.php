@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'Registro de Productos')
+@section('titulo', 'Editar Productos')
 
 @section('Contenido')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -22,7 +22,7 @@
             @endphp
             
             @endif
-          </script>
+        </script>
 
         <div class="row justify-content-center">
             <div class="col-md-6">
