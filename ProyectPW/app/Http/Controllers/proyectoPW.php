@@ -43,34 +43,40 @@ class proyectoPW extends Controller
     }
     
     #funciones usuario
-
-
+    public function AgregarUsuario(){
+        return view('registrarUsuario');
+    }
+    public function EditarUsuario(){
+        return view('editarUsuario');
+    }
+    public function ConsultaUsuario(){
+        return view('consultaUsuario');
+    }
+    public function ConsultaXNombreUsuario(){
+        return view('consultaxNombreUsuario');
+    }
 
     #funciones
     public function metodoOrden_Compra() {
         return view('orden_compra');
     }
-
     public function metodoVentas() {
         return view('ventas');
     }
-
     public function metodoReportesGraficas() {
         return view('reportes_graficas');
     }
 
+    #Funciones de login
     public function metodoWelcomeCompras() {
         return view('welcome_compras');
     }
-
     public function metodoWelcomeVentas() {
         return view('welcome_ventas');
     }
-
     public function metodoWelcomeGerencia() {
         return view('welcome_gerencia');
     }
-
     public function metodoWelcomeAlmacen() {
         return view('welcome_almacen');
     }
@@ -92,17 +98,27 @@ class proyectoPW extends Controller
     }   
 
     #boton para la edicion de un producto
-    public function EditaProducto(validadorPW $req){
-        $nproducto = $req->input('txtN'); 
-        session()->flash('exitoso', $nproducto);
-        return redirect('/editarproducto');
+    public function EditarP(){
+        return redirect('/editarproducto')->with('confirmacion','Se ha actualizado');
+    }
+    #boton para registroproveedor
+    public function RegistrarProveedor(){
+        return redirect('/agregarproveedor')->with('confirmacion','se ha guardado');
     } 
+    #btn pra editar provedores
+    public function EditarProveedores(){
+        return redirect('/editarproveedor')->with('confirmacion','se ha guardado');
+    }
 
-    public function RegistrarProveedor(validadorPW $req){
-        $nproveedor = $req->input('txtNombre'); 
-        session()->flash('exitoso', $nproveedor);
-        return redirect('/agregarproveedor');
-    } 
+    #btn pra registrousuarios
+    public function RegistrarUsuario(){
+        return redirect('/registrousuario')->with('confirmación','Se ha actualizado');
+    }
+
+    #btn pra editarusuarios
+    public function EditarUsuarios(){
+        return redirect('/editarusuarios')->with('confirmación','Se ha actualizado');
+    }
     
 
 

@@ -34,6 +34,14 @@ Route::get('/editarproveedor', [proyectoPW::class, 'EditarProveedor'])->name('ap
 Route::get('/consultaproveedores', [proyectoPW::class, 'ConsultaProveedor'])->name('apodoConsultarProveedor');
 Route::get('/consultaxnombreProveedores', [proyectoPW::class, 'ConsultaXNombreProveedor'])->name('apodoConsultaXNombreProveedor');
 
+#rutas usuario 
+Route::get('/registrousuario', [proyectoPW::class, 'AgregarUsuario'])->name('apodoAgregarUsuario');
+Route::get('/editarusuarios', [proyectoPW::class, 'EditarUsuario'])->name('apodoEditarUsuario');
+Route::get('/consultausuarios', [proyectoPW::class, 'ConsultaUsuario'])->name('apodoConsultarUsuario');
+Route::get('/consultaxnombreUsuarios', [proyectoPW::class, 'ConsultaXNombreUsuario'])->name('apodoConsultarXNUsuario');
+
+
+
 
 Route::get('/ordencompra', [proyectoPW::class, 'metodoOrden_Compra'])->name('apodoorden');
 Route::get('/ventas', [proyectoPW::class, 'metodoVentas'])->name('apodoventas');
@@ -44,30 +52,24 @@ Route::get('/ralmacen', function () {
     return view('almacen');
 });
 
-Route::get('/registrousuario', function () {
-    return view('registrarUsuario');
-});
-
-Route::get('/editarusuarios', function () {
-    return view('editarUsuario');
-});
-
 #ruta post del boton para ingresar.. login 
 Route::post('/Guardar',[proyectoPW::class, 'Guardar'])->name('apodoIngresar');
 
 #ruta post del boton de el registro. registrar productos
 Route::post('/RegistrarP',[proyectoPW::class, 'RegistrarProducto'])->name('apodoRP');
 #boton para guardar los cambios editados
-Route::post('/EditarP',[proyectoPW::class, 'EditaProducto'])->name('apodoEditarP');
+Route::post('/EditarP',[proyectoPW::class, 'EditarP'])->name('apodoEditarP');
 
 #ruta post del boton de el registro. registrar proveedores
-Route::post('/RegistrarProv',[proyectoPW::class, 'RegistrarProveedor'])->name('apodoRProv');
+Route::post('/RegistrarPro',[proyectoPW::class, 'RegistrarProveedor'])->name('apodoRProv');
 #boton para guardar los cambios editados
-Route::post('/EditarProve',[proyectoPW::class, 'EditaProv'])->name('apodoEditarProv');
-
-
+Route::post('/EditarProve',[proyectoPW::class, 'EditarProveedores'])->name('apodoEditarProv');
 
 #boton para registrar usuarios 
+Route::post('/Registrarusuario',[proyectoPW::class, 'RegistrarUsuario'])->name('apodoRU');
+#boton para editar usuarios 
+Route::post('/Editarusuario',[proyectoPW::class, 'EditarUsuarios'])->name('apodoEU');
+
 
 
 

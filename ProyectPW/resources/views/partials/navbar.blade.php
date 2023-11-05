@@ -56,8 +56,8 @@
          <div class="dropdown-menu">
           <a class="dropdown-item" href="registrousuario">Registrar</a>
           <a class="dropdown-item" href="editarusuarios">Editar</a>
-          <a class="dropdown-item" href="#">Consultar</a>
-          <a class="dropdown-item" href="#">Consultar por nombre</a>
+          <a class="dropdown-item" href="consultausuarios">Consultar</a>
+          <a class="dropdown-item" href="consultaxnombreUsuarios">Consultar por nombre</a>
         </div>
     </li>
     <li class="nav-item dropdown">

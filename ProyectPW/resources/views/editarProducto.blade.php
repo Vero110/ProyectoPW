@@ -5,6 +5,7 @@
 @section('Contenido')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
+    <h1 class="text-center text-info fst-italic fw-bold">Editar Productos</h1>
     <div class="container mt-5">
 
         <script>
@@ -12,17 +13,17 @@
             
               Swal.fire({
                 icon:'success',
-                title: 'El producto "{{ session('exitoso') }}" se ha actualizado',
+                title: 'El producto ha sido actualizado',
                 showConfirmButton: false,
                 timer: 1500
             })
 
             @php
-                session()->forget('exitoso');
+                session()->forget('confirmacion');
             @endphp
             
             @endif
-        </script>
+          </script>
 
         <div class="row justify-content-center">
             <div class="col-md-6">

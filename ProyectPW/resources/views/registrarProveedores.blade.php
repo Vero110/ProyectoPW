@@ -1,4 +1,5 @@
 @extends('layouts.plantilla')
+@extends('layouts.plantilla')
 
 @section('titulo', 'Registro de Proveedores')
 
@@ -7,16 +8,16 @@
 
     <h1 class="text-center text-info fst-italic fw-bold">Registro de Proveedores</h1>
     <div class="container mt-5">
+
         <script>
             @if(session()->has('confirmacion'))
             
               Swal.fire({
                 icon:'success',
-                title: 'Se ha agregado un nuevo Proveedor',
+                title: 'El proveedor se ha guardado',
                 showConfirmButton: false,
                 timer: 1500
             })
-
             @php
                 session()->forget('confirmacion');
             @endphp
@@ -27,7 +28,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="RegistrarProv">
+                    <form method="POST" action="RegistrarPro">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Agregar un nuevo Proveedor:</h2>

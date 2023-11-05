@@ -3,13 +3,28 @@
 @section('titulo', 'Editar Usuario')
 
 @section('Contenido')
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <h1 class="text-center text-info fst-italic fw-bold">Edición Usuario</h1>
     <div class="container mt-5">
+        <script>
+            @if(session()->has('confirmación'))
+            
+              Swal.fire({
+                icon:'success',
+                title: 'El usuario se ha actualizado',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            @php
+                session()->forget('confirmación');
+            @endphp
+            
+            @endif
+          </script>
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="">
+                    <form method="POST" action="Editarusuario">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Editar Usuario:</h2>

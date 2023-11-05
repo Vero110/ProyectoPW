@@ -3,16 +3,34 @@
 @section('titulo', 'Registro de Usuarios')
 
 @section('Contenido')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <h1 class="text-center text-info fst-italic fw-bold">Registro de Usuarios</h1>
     <div class="container mt-5">
+
+        <script>
+            @if(session()->has('confirmación'))
+            
+              Swal.fire({
+                icon:'success',
+                title: 'El usuario se ha guardado',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            @php
+                session()->forget('confirmación');
+            @endphp
+            
+            @endif
+          </script>
+          
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="">
+                    <form method="POST" action="Registrarusuario">
                         @csrf
                         <div class="card-body">
-                            <h2 class="card-text text-center">Agregar un nuevo Proveedor:</h2>
+                            <h2 class="card-text text-center">Agregar un nuevo Usuario:</h2>
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre:</label>
                                 <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}" required>

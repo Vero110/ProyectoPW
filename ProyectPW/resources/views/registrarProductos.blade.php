@@ -17,7 +17,6 @@
                 showConfirmButton: false,
                 timer: 1500
             })
-
             @php
                 session()->forget('confirmacion');
             @endphp
