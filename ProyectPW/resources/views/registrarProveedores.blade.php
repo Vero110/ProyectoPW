@@ -14,7 +14,7 @@
             
               Swal.fire({
                 icon:'success',
-                title: 'El proveedor se ha guardado',
+                title: 'El proveedor "{{ session('confirmacion') }}" se ha guardado',
                 showConfirmButton: false,
                 timer: 1500
             })
@@ -34,25 +34,25 @@
                             <h2 class="card-text text-center">Agregar un nuevo Proveedor:</h2>
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre:</label>
-                                <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}" required>
+                                <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}">
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtNombre') }}</p>
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtEmpresa" class="form-label">Empresa:</label>
-                                <input type="text" name="txtEmpresa" class="form-control" value="{{ old('txtEmpresa') }}" required>
+                                <input type="text" name="txtEmpresa" class="form-control" value="{{ old('txtEmpresa') }}">
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtEmpresa') }}</p>
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtTelefono" class="form-label">Telefono:</label>
-                                <input type="number" name="txtTelefono" class="form-control" value="{{ old('txtTelefono') }}" required>
+                                <input type="text" name="txtTelefono" class="form-control" value="{{ old('txtTelefono') }}">
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtTelefono') }}</p>
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtCorreo" class="form-label">Correo:</label>
-                                <input type="email" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" required>
+                                <input type="text" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}">
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCorreo') }}</p>
                             </div>
 

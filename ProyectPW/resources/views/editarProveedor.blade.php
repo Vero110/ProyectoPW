@@ -7,22 +7,21 @@
 
     <h1 class="text-center text-info fst-italic fw-bold">Editar Proveedores</h1>
     <div class="container mt-5">
-            <script>
-                @if(session()->has('confirmacion'))
-                
-                Swal.fire({
-                    icon:'success',
-                    title: 'Se han guardado los cambios',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
-
-                @php
-                    session()->forget('confirmacion');
-                @endphp
-                
-                @endif
-            </script>
+        <script>
+            @if(session()->has('confirmacion'))
+            
+              Swal.fire({
+                icon:'success',
+                title: 'El proveedor "{{ session('confirmacion') }}" se ha actualizado',
+                showConfirmButton: false,
+                timer: 1500
+            })
+            @php
+                session()->forget('confirmacion');
+            @endphp
+            
+            @endif
+          </script>
           
         <div class="row justify-content-center">
             <div class="col-md-6">

@@ -3,42 +3,46 @@
 @section('titulo', 'Orden de compra')
 
 @section('Contenido')
-
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <br>
 <h3 class="display-4 text-center text-info">Generar órden de compra</h3>
 
 <br>
+<h3 class="display-4 text-center text-info">Ventas</h3>
+<script>
+  @if(session()->has('confirmacion'))
+  
+    Swal.fire({
+      icon:'success',
+      title: 'La orden de compra con "{{ session('confirmacion') }}" se ha realizado con éxito',
+      showConfirmButton: false,
+      timer: 1500
+  })
+  @php
+      session()->forget('confirmacion');
+  @endphp
+  
+  @endif
+</script>
 
 <div class="container" style="background-color: #f4f4f4; padding: 20px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
-    <form>
+    <form method="POST" action="RegistrarOrdencompra">
       <div class="form-group">
-        <label for="empresa" style="font-weight: bold;">Empresa:</label>
-        <select id="empresa" class="form-control custom-select" style="border: 2px solid #007BFF; border-radius: 5px;">
-          <option selected>Elige la empresa</option>
-          <option>Empresa 1</option>
-          <option>Empresa 2</option>
-          <option>Empresa 3</option>
-        </select>
+        <label for="txtEmpresa" class="form-label">Empresa:</label>
+        <input type="text" id="txtEmpresa" name="txtEmpresa" class="form-control" value="{{ old('txtEmpresa') }}">
+        <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtEmpresa') }}</p>
       </div>
       <br>
       <div class="form-group">
-        <label for="productos" style="font-weight: bold;">Productos requeridos:</label>
-        <select id="productos" class="form-control custom-select" style="border: 2px solid #007BFF; border-radius: 5px;">
-          <option selected>Elige los productos</option>
-          <option>Producto A</option>
-          <option>Producto B</option>
-          <option>Producto C</option>
-        </select>
+        <label for="txtProductos" class="form-label">Producto:</label>
+        <input type="text" id="txtProductos" name="txtProductos" class="form-control" value="{{ old('txtProductos') }}">
+        <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtProductos') }}</p>
       </div>
       <br>
       <div class="form-group">
-        <label for="proveedor" style="font-weight: bold;">Proveedor:</label>
-        <select id="proveedor" class="form-control custom-select" style="border: 2px solid #007BFF; border-radius: 5px;">
-          <option selected>Elige un proveedor</option>
-          <option>Proveedor X</option>
-          <option>Proveedor Y</option>
-          <option>Proveedor Z</option>
-        </select>
+        <label for="txtProveedor" class="form-label">Proveedor:</label>
+        <input type="text" id="txtProveedor" name="txtProveedor" class="form-control" value="{{ old('txtProveedor') }}">
+        <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtProveedor') }}</p>
       </div>
       <br>
       <div class="row">

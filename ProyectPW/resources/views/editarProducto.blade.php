@@ -13,11 +13,10 @@
             
               Swal.fire({
                 icon:'success',
-                title: 'El producto ha sido actualizado',
+                title: 'El producto "{{ session('confirmacion') }}" se ha actualizado',
                 showConfirmButton: false,
                 timer: 1500
             })
-
             @php
                 session()->forget('confirmacion');
             @endphp
@@ -33,45 +32,45 @@
                         <div class="card-body">
                             <h2 class="card-text text-center">Editar producto:</h2>
                             <div class="mb-3">
-                                <label for="txtN" class="form-label">Nombre:</label>
-                                <input type="text" id="txtN" name="txtN" class="form-control" value="{{ old('txtN') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtN') }}</p>
+                                <label for="txtNombre" class="form-label">Nombre:</label>
+                                <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtN') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtNombre') }}</p>
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtS" class="form-label">No. de serie:</label>
-                                <input type="text" name="txtS" class="form-control" value="{{ old('txtS') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtS') }}</p>
+                                <label for="txtSerie" class="form-label">No. de serie:</label>
+                                <input type="text" name="txtSerie" class="form-control" value="{{ old('txtSerie') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtSerie') }}</p>
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtM" class="form-label">Marca:</label>
-                                <input type text="text" name="txtM" class="form-control" value="{{ old('txtM') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtM') }}</p>
+                                <label for="txtMarca" class="form-label">Marca:</label>
+                                <input type text="text" name="txtMarca" class="form-control" value="{{ old('txtMarca') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtMarca') }}</p>
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtC" class="form-label">Cantidad:</label>
-                                <input type="number" name="txtC" class="form-control" value="{{ old('txtC') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtC') }}</p>
+                                <label for="txtCantidad" class="form-label">Cantidad:</label>
+                                <input type="text" name="txtCantidad" class="form-control" value="{{ old('txtCantidad') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCantidad') }}</p>
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtCs" class="form-label">Costo:</label>
-                                <input type="number" name="txtCs" class="form-control" value="{{ old('txtCs') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCs') }}</p>
+                                <label for="txtCosto" class="form-label">Costo:</label>
+                                <input type="text" name="txtCosto" class="form-control" value="{{ old('txtCosto') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCosto') }}</p>
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtFI" class="form-label">Fecha de Ingreso:</label>
-                                <input type="date" name="txtFI" class="form-control" value="{{ old('txtFI') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtFI') }}</p>
+                                <label for="txtFechaIngreso" class="form-label">Fecha de Ingreso:</label>
+                                <input type="text" name="txtFechaIngreso" class="form-control" value="{{ old('txtFechaIngreso') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtFechaIngreso') }}</p>
                             </div>
 
                             <div class="mb-3">
-                                <label for="txtF" class="form-label">Foto:</label>
-                                <input type="file" name="txtF" class="form-control" accept="image/*" value="{{ old('txtF') }}" required>
-                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtF') }}</p>
+                                <label for="txtFoto" class="form-label">Foto:</label>
+                                <input type="file" name="txtFoto" class="form-control" accept="image/*" value="{{ old('txtFoto') }}" >
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtFoto') }}</p>
                             </div>
                         </div>
                         <div class="card-footer text-body-secondary text-center">

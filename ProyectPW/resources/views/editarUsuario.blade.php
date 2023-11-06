@@ -7,20 +7,22 @@
     <h1 class="text-center text-info fst-italic fw-bold">Edición Usuario</h1>
     <div class="container mt-5">
         <script>
-            @if(session()->has('confirmación'))
+            @if(session()->has('confirmacion'))
             
               Swal.fire({
                 icon:'success',
-                title: 'El usuario se ha actualizado',
+                title: 'El usuario "{{ session('confirmacion') }}" se ha actualizado',
                 showConfirmButton: false,
                 timer: 1500
             })
             @php
-                session()->forget('confirmación');
+                session()->forget('confirmacion');
             @endphp
             
             @endif
           </script>
+
+
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">

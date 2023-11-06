@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests\validadorPW;
+use App\Http\Requests\validadorProductos;
+use App\Http\Requests\validadorUsuarios;
+use App\Http\Requests\validadorProveedores;
+use App\Http\Requests\validadorExtras;
 
 
 class proyectoPW extends Controller
@@ -91,36 +94,57 @@ class proyectoPW extends Controller
     }
 
     #boton para registrar un producto
-    public function RegistrarProducto(validadorPW $req){
+    public function RegistrarProducto(validadorProductos $req){
         $nombreproducto = $req->input('txtNombre'); 
         session()->flash('confirmacion', $nombreproducto);
         return redirect('/registroproductos');
     }   
 
-    #boton para la edicion de un producto
-    public function EditarP(){
-        return redirect('/editarproducto')->with('confirmacion','Se ha actualizado');
-    }
+    public function EditarP(validadorProductos $req){
+        $nombreproducto = $req->input('txtNombre'); 
+        session()->flash('confirmacion', $nombreproducto);
+        return redirect('/editarproducto');
+    }   
+    
     #boton para registroproveedor
-    public function RegistrarProveedor(){
-        return redirect('/agregarproveedor')->with('confirmacion','se ha guardado');
+    public function RegistrarProveedor(validadorProveedores $req){
+        $nombreproveedor = $req->input('txtNombre'); 
+        session()->flash('confirmacion', $nombreproveedor);
+        return redirect('/agregarproveedor');
     } 
+
     #btn pra editar provedores
-    public function EditarProveedores(){
-        return redirect('/editarproveedor')->with('confirmacion','se ha guardado');
-    }
+    public function EditarProveedores(validadorProveedores $req){
+        $nombreproveedor = $req->input('txtNombre'); 
+        session()->flash('confirmacion', $nombreproveedor);
+        return redirect('/editarproveedor');
+    } 
 
     #btn pra registrousuarios
-    public function RegistrarUsuario(){
-        return redirect('/registrousuario')->with('confirmación','Se ha actualizado');
-    }
+    public function RegistrarUsuario(validadorUsuarios $req){
+        $nombreusuario = $req->input('txtNombre'); 
+        session()->flash('confirmacion', $nombreusuario);
+        return redirect('/registrousuario');
+    }   
 
     #btn pra editarusuarios
-    public function EditarUsuarios(){
-        return redirect('/editarusuarios')->with('confirmación','Se ha actualizado');
+    public function EditarUsuarios(validadorUsuarios $req){
+        $nombreusuario = $req->input('txtNombre'); 
+        session()->flash('confirmacion', $nombreusuario);
+        return redirect('/editarusuarios');
+    }   
+
+    public function RegistrarOrdenCompra(validadorExtras $req){
+        $nombreempresa = $req->input('txtEmpresa'); 
+        session()->flash('confirmacion', $nombreempresa);
+        return redirect('/ordencompra');
     }
     
-
+    public function RegistrarVentas(validadorExtras $req){
+        $total = $req->input('txtTotal'); 
+        session()->flash('confirmacion', $total);
+        return redirect('/venta');
+    } 
 
 
  }

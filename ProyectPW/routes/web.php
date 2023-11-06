@@ -70,6 +70,8 @@ Route::post('/Registrarusuario',[proyectoPW::class, 'RegistrarUsuario'])->name('
 #boton para editar usuarios 
 Route::post('/Editarusuario',[proyectoPW::class, 'EditarUsuarios'])->name('apodoEU');
 
+#ruta post orden de compra
+Route::post('/RegistrarOrdencompra',[proyectoPW::class, 'RegistrarOrdenCompra'])->name('apodoOR');
 
-
-
+#ruta post ventas
+Route::post('/RegistrarVentas',[proyectoPW::class, 'RegistrarVentas'])->name('apodoV');
