@@ -32,37 +32,37 @@
                             <h2 class="card-text text-center">Editar Usuario:</h2>
                             <div class="mb-3">
                                         <label for="txtNombre" class="form-label">Nombre:</label>
-                                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}" required>
+                                        <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}" >
                                         <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtNombre') }}</p>
                                     </div>
         
                                     <div class="mb-3">
                                         <label for="txtAP" class="form-label">Apellido Paterno:</label>
-                                        <input type="text" name="txtAP" class="form-control" value="{{ old('txtAP') }}" required>
+                                        <input type="text" name="txtAP" class="form-control" value="{{ old('txtAP') }}" >
                                         <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtAP') }}</p>
                                     </div>
         
                                     <div class="mb-3">
                                         <label for="txtAM" class="form-label">Apellido Materno:</label>
-                                        <input type="text" name="txtAM" class="form-control" value="{{ old('txtAM') }}" required>
+                                        <input type="text" name="txtAM" class="form-control" value="{{ old('txtAM') }}" >
                                         <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtAM') }}</p>
                                     </div>
         
                                     <div class="mb-3">
                                         <label for="txtCorreo" class="form-label">Correo:</label>
-                                        <input type="email" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" required>
+                                        <input type="email" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" >
                                         <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCorreo') }}</p>
                                     </div>
         
                                     <div class="mb-3">
                                         <label for="txtPuesto" class="form-label">Puesto:</label>
-                                        <input type="text" name="txtPuesto" class="form-control" value="{{ old('txtPuesto') }}" required>
+                                        <input type="text" name="txtPuesto" class="form-control" value="{{ old('txtPuesto') }}" >
                                         <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtPuesto') }}</p>
                                     </div>
         
                                     <div class="mb-3">
                                         <label for="txtContraseña" class="form-label">Contraseña:</label>
-                                        <input type="password" name="txtContraseña" class="form-control" value="{{ old('txtContraseña') }}" required>
+                                        <input type="password" name="txtContraseña" class="form-control" value="{{ old('txtContraseña') }}" >
                                         <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtContraseña') }}</p>
                                     </div>
         

@@ -1,5 +1,4 @@
 @extends('layouts.plantilla')
-@extends('layouts.plantilla')
 
 @section('titulo', 'Registro de Proveedores')
 

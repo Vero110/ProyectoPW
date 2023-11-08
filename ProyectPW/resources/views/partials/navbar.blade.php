@@ -65,8 +65,6 @@
             Reportes y gráficas
           </a>
          <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Ganancias por mes</a>
-          <a class="dropdown-item" href="#">Reportes de la empresa</a>
           <a class="dropdown-item" href="/reportes-y-graficas">Reportes y gráficas de compras y ventas</a>
         </div>
     </li>

@@ -51,13 +51,13 @@
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Correo:</label>
-                                    <input type="email" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" required>
+                                    <input type="text" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" >
                                     <p style="color: #ff0000; font-style: italic; font-weight: bold;">{{ $errors->first('txtCorreo') }}</p>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Contraseña:</label>
-                                    <input type="password" name="txtContraseña" class="form-control" value="{{ old('txtContraseña') }}" required>
+                                    <input type="password" name="txtContraseña" class="form-control" value="{{ old('txtContraseña') }}" >
                                     <p style="color: #ff0000; font-style: italic; font-weight: bold;">{{ $errors->first('txtContraseña') }}</p>
                                 </div>
                                 <div style="text-align: center;">

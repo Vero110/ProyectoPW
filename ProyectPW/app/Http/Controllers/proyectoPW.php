@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\validadorLogin;
 use App\Http\Requests\validadorProductos;
 use App\Http\Requests\validadorUsuarios;
 use App\Http\Requests\validadorProveedores;
@@ -89,9 +90,10 @@ class proyectoPW extends Controller
     
 
     #boton para iniciar sesion
-    public function Guardar(){
-        return redirect('/')->with('confirmacion','Has iniciado sesion correctamente');
-    }
+    public function Guardar(validadorLogin $req){
+        $correo = $req->input('txtCorreo'); 
+        session()->flash('confirmacion', $correo);
+        return redirect('/');    }
 
     #boton para registrar un producto
     public function RegistrarProducto(validadorProductos $req){
@@ -145,6 +147,7 @@ class proyectoPW extends Controller
         session()->flash('confirmacion', $total);
         return redirect('/venta');
     } 
+
 
 
  }
