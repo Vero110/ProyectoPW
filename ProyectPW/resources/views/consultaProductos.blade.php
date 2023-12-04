@@ -4,8 +4,6 @@
 
 @section('Contenido')
 
-@foreach ($consultarProd as $item)
-
 <div class="container mt-5 col-md-10 mb-4">
     <br>
     <br>
@@ -17,6 +15,13 @@
                     <h1 class="text-center">Consulta de Productos</h1>
                 </div>
                 <div class="card-body">
+                    <!-- Filter form -->
+                    <form action="{{route('filtrado.search')}}" method="GET">
+                        <input type="text" name="nombre" placeholder="Filter by nombre">
+                        <input type="text" name="noserie" placeholder="Filter by noserie">
+                        <button type="submit">Filter</button>
+                    </form>
+                    <!-- End filter form -->
                     <table class="table table-striped-columns">
                         <thead>
                             <tr>
@@ -32,27 +37,26 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td>{{$item->nombre}}</td>
-                                <td>{{$item->noserie}}</td>
-                                <td>{{$item->marca}}</td>
-                                <td>{{$item->cantidad}}</td>
-                                <td>{{$item->costo}}</td>
-                                <td>.</td>
-                                <td>{{$item->fecha}}</td>
-                                <td>{{$item->estatus}}</td>
-                                <td>{{$item->foto}}</td>
-                            </tr>
+                            @foreach ($consultarProd as $item)
+                                <tr>
+                                    <td>{{ $item->nombre }}</td>
+                                    <td>{{ $item->noserie }}</td>
+                                    <td>{{ $item->marca }}</td>
+                                    <td>{{ $item->cantidad }}</td>
+                                    <td>{{ $item->costo }}</td>
+                                    <td>.</td>
+                                    <td>{{ $item->fecha }}</td>
+                                    <td>{{ $item->estatus }}</td>
+                                    <td><img src="{{ $item->foto }}" alt="Product Image"></td>
+                                </tr>
+                            @endforeach
                         </tbody>
-                      </table>
+                    </table>
+                    <a href="{{ route('products.pdf') }}" class="btn btn-primary">Download PDF</a>
                 </div>
             </div>
         </div>
     </div>
-    @endforeach
 </div>
+
 @endsection
-
-            
-
-                

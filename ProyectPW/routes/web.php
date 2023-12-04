@@ -17,6 +17,11 @@ use App\Http\Controllers\controllerProductos;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/products/pdf', [controllerProductos::class, 'exportPdf'])->name('products.pdf');
+Route::get('/consultarnombre',[controllerProductos::class,'buscarPorNombre'])->name('consulta.buscarPorNombre');
+
+
 #rutas de inicio
 Route::get('/welcome-compras', [proyectoPW::class, 'metodoWelcomeCompras'])->name('apodoWelcomeC');
 Route::get('/welcome-ventas', [proyectoPW::class, 'metodoWelcomeVentas'])->name('apodoWelcomeV');
@@ -28,6 +33,7 @@ Route::get('/', [proyectoPW::class, 'Login'])->name('apodoLogin');
 #rutas de productos
 Route::get('/registroproductos/create',[controllerProductos::class,'create'])->name('rproducto.create');
 Route::get('/consultaproductos',[controllerProductos::class, 'index'])->name('cproducto.index');
+Route::get('/filtrado', [controllerProductos::class,'consultaProductos'])->name('filtrado.search');
 
 #Route::get('/registroproductos', [proyectoPW::class, 'RegistroProducto'])->name('apodoRP');
 #Route::get('/consultaproductos', [proyectoPW::class, 'ConsultaProductos'])->name('apodoCP');
