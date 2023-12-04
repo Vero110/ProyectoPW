@@ -27,7 +27,7 @@ class validadorUsuarios extends FormRequest
             'txtAM' => 'required|min:3',
             'txtCorreo' => 'required|email',
             'txtPuesto' => 'required',
-            'txtContraseña' => 'required|min:7'
+            'password' => 'required|min:7'
         ];
     }
 }

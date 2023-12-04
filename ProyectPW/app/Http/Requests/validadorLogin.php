@@ -23,7 +23,7 @@ class validadorLogin extends FormRequest
     {
         return [
             'txtCorreo' => 'required|email',
-            'txtContraseña' => 'required',
+            'password' => 'required',
 
         ];
     }

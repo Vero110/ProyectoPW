@@ -63,7 +63,7 @@
 
                             <div class="mb-3">
                                 <label for="txtContraseña" class="form-label">Contraseña:</label>
-                                <input type="password" name="txtContraseña" class="form-control" value="{{ old('txtContraseña') }}" >
+                                <input type="password" name="password" class="form-control" value="{{ old('txtContraseña') }}" >
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtContraseña') }}</p>
                             </div>
 

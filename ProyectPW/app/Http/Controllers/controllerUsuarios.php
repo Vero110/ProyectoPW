@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\validadorUsuarios;
 use DB;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Hash;
 
 class controllerUsuarios extends Controller
 {
@@ -37,7 +38,7 @@ class controllerUsuarios extends Controller
             "am"=>$request->input('txtAM'),
             "correo"=>$request->input('txtCorreo'),
             "puesto"=>$request->input('txtPuesto'),
-            "contraseña"=>$request->input('txtContraseña'),
+            "password"=>$request->input('password'),
             "created_at"=>Carbon::now(),
             "updated_at"=>Carbon::now(),
         ]);

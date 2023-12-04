@@ -5,6 +5,7 @@ use App\Http\Controllers\proyectoPW;
 use App\Http\Controllers\controllerUsuarios;
 use App\Http\Controllers\controllerProveedores;
 use App\Http\Controllers\controllerProductos;
+use App\Http\Controllers\LoginController;
 
 
 /*
@@ -24,6 +25,9 @@ Route::get('/welcome-gerencia', [proyectoPW::class, 'metodoWelcomeGerencia'])->n
 Route::get('/welcome-almacen', [proyectoPW::class, 'metodoWelcomeAlmacen'])->name('apodoWelcomeA');
 
 Route::get('/', [proyectoPW::class, 'Login'])->name('apodoLogin');
+
+Route::post('/login', [LoginController::class, 'login'])->name('login');
+/* Route::post('/Guardar',[proyectoPW::class, 'Guardar'])->name('apodoIngresar'); */
 
 #rutas de productos
 Route::get('/registroproductos/create',[controllerProductos::class,'create'])->name('rproducto.create');
@@ -66,7 +70,7 @@ Route::get('/ralmacen', function () {
 });
 
 #ruta post del boton para ingresar.. login 
-Route::post('/Guardar',[proyectoPW::class, 'Guardar'])->name('apodoIngresar');
+/* Route::post('/Guardar',[proyectoPW::class, 'Guardar'])->name('apodoIngresar'); */
 
 #ruta post del boton de el registro. registrar productos
 Route::post('/registrarproducto',[controllerProductos::class,'store'])->name('registroprod.store');
@@ -91,3 +95,6 @@ Route::post('/RegistrarOrdencompra',[proyectoPW::class, 'RegistrarOrdenCompra'])
 
 #ruta post ventas
 Route::post('/RegistrarVentas',[proyectoPW::class, 'RegistrarVentas'])->name('apodoV');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

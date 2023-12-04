@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('am');
             $table->string('correo');
             $table->string('puesto');
-            $table->string('contraseña');
+            $table->string('password');
 
             $table->timestamps();
         });

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,29 +48,23 @@
                             <h1 style="color: #fff;">Ingresar</h1>
                         </div>
                         <div class="card-body">
-                            <form method="POST" action="/Guardar">
+                            <form method="POST" action="{{ route('login') }}"">
                                 @csrf
                                 <div class="mb-3">
                                     <label class="form-label">Correo:</label>
-                                    <input type="text" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" >
+                                    <input type="text" id="txtCorreo" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}" >
                                     <p style="color: #ff0000; font-style: italic; font-weight: bold;">{{ $errors->first('txtCorreo') }}</p>
                                 </div>
 
                                 <div class="mb-3">
                                     <label class="form-label">Contraseña:</label>
-                                    <input type="password" name="txtContraseña" class="form-control" value="{{ old('txtContraseña') }}" >
+                                    <input type="password" id="password" name="password" class="form-control" value="{{ old('txtContraseña') }}" >
                                     <p style="color: #ff0000; font-style: italic; font-weight: bold;">{{ $errors->first('txtContraseña') }}</p>
                                 </div>
                                 <div style="text-align: center;">
                                     <button type="submit" class="btn" style="background-color: #3498db; color: #fff;">Ingresar</button>
                                 </div>
                                 <br>
-                                <div class="mb-3" style="text-align: center;">
-                                    <label class="form-label">¿No tienes cuenta?</label>
-                                    <label class="form-label">Regístrate aquí</label>
-                                    <br>
-                                    <button type="submit" class="btn btn-light">Registrar</button>
-                                </div>
                             </form>
                         </div>
                     </div>
