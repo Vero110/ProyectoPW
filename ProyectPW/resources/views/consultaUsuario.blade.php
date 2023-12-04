@@ -1,6 +1,6 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'Consulta de Productos')
+@section('titulo', 'Consulta de Usuarios')
 
 @section('Contenido')
 <div class="container">
@@ -11,27 +11,24 @@
         <div class="col-md-9">
             <div class="card">
                 <div class="card-header bg-primary text-white">
-                    <h1 class="text-center">Consulta de Productos</h1>
+                    <h1 class="text-center">Consultar Usuarios</h1>
                 </div>
                 <div class="card-body">
                     <table class="table table-striped-columns">
                         <thead>
                             <tr>
-                              <th scope="col">No. de Serie</th>
                               <th scope="col">Nombre</th>
-                              <th scope="col">Marca</th>
-                              <th scope="col">Cantidad</th>
-                              <th scope="col">Costo de compra</th>
-                              <th scope="col">Costo de venta</th>
-                              <th scope="col">Fecha</th>
-                              <th scope="col">Acciones</th>
+                              <th scope="col">Apellido P</th>
+                              <th scope="col">Apellido M</th>
+                              <th scope="col">Correo</th>
+                              <th scope="col">Puesto</th>
+                              <th scope="col">Contraseña</th>
+                        
                             </tr>
                           </thead>
                       </table>
                     <br>
-                    <br>
-                    <br>
-                    <br>
+                    
                 
                 </div>
             </div>
@@ -46,8 +43,5 @@
 <br>
 <br>
 <br>
+<br>
 @endsection
-
-            
-
-                

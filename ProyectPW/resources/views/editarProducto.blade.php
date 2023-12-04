@@ -1,11 +1,11 @@
 @extends('layouts.plantilla')
 
-@section('titulo', 'Registro de Productos')
+@section('titulo', 'Editar Productos')
 
 @section('Contenido')
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
-    <h1 class="text-center text-info fst-italic fw-bold">Registro de Productos</h1>
+    <h1 class="text-center text-info fst-italic fw-bold">Editar Productos</h1>
     <div class="container mt-5">
 
         <script>
@@ -13,7 +13,7 @@
             
               Swal.fire({
                 icon:'success',
-                title: 'El producto "{{ session('confirmacion') }}" se ha guardado',
+                title: 'El producto "{{ session('confirmacion') }}" se ha actualizado',
                 showConfirmButton: false,
                 timer: 1500
             })
@@ -23,17 +23,17 @@
             
             @endif
           </script>
-          
+
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="RegistrarP">
+                    <form method="POST" action="EditarP">
                         @csrf
                         <div class="card-body">
-                            <h2 class="card-text text-center">Ingresar un producto:</h2>
+                            <h2 class="card-text text-center">Editar producto:</h2>
                             <div class="mb-3">
                                 <label for="txtNombre" class="form-label">Nombre:</label>
-                                <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtNombre') }}" >
+                                <input type="text" id="txtNombre" name="txtNombre" class="form-control" value="{{ old('txtN') }}" >
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtNombre') }}</p>
                             </div>
 
@@ -51,13 +51,13 @@
 
                             <div class="mb-3">
                                 <label for="txtCantidad" class="form-label">Cantidad:</label>
-                                <input type="number" name="txtCantidad" class="form-control" value="{{ old('txtCantidad') }}" >
+                                <input type="text" name="txtCantidad" class="form-control" value="{{ old('txtCantidad') }}" >
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCantidad') }}</p>
                             </div>
 
                             <div class="mb-3">
                                 <label for="txtCosto" class="form-label">Costo:</label>
-                                <input type="number" name="txtCosto" class="form-control" value="{{ old('txtCosto') }}" >
+                                <input type="text" name="txtCosto" class="form-control" value="{{ old('txtCosto') }}" >
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCosto') }}</p>
                             </div>
 
@@ -74,7 +74,7 @@
                             </div>
                         </div>
                         <div class="card-footer text-body-secondary text-center">
-                            <button type="submit" class="btn btn-info">Guardar Producto</button>
+                            <button type="submit" class="btn btn-info">Guardar cambios</button>
                         </div>
                     </form>
                 </div>
