@@ -21,3 +21,9 @@ Route::get('/', [controllerPW::class, 'metodoWelcome'])->name('apodowelcome');
 Route::get('/ventas', [controllerPW::class, 'metodoVentas'])->name('apodoventas');
 
 Route::get('/reportes-y-graficas', [controllerPW::class, 'metodoReportesGraficas'])->name('apodoreportesG');
+
+Route::get('/welcome-compras', [controllerPW::class, 'metodoWelcomeCompras'])->name('apodoWelcomeC');
+
+Route::get('/welcome-ventas', [controllerPW::class, 'metodoWelcomeVentas'])->name('apodoWelcomeV');
+
+Route::get('/welcome-almacen', [controllerPW::class, 'metodoWelcomeAlmacen'])->name('apodoWelcomeA');

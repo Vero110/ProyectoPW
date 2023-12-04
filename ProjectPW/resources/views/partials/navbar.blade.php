@@ -39,7 +39,6 @@
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Reportes y gráficas</a>
         <div class="dropdown-menu">
-          <a class="dropdown-item" href="#">Ganancias por mes</a>
           <a class="dropdown-item" href="#">Reportes de la empresa</a>
           <a class="dropdown-item" href="#">Reportes y gráficas de compras y ventas</a>
         </div>

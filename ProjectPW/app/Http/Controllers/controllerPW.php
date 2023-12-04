@@ -23,5 +23,15 @@ class controllerPW extends Controller
         return view('reportes_graficas');
     }
 
+    public function metodoWelcomeCompras() {
+        return view('welcome_compras');
+    }
 
+    public function metodoWelcomeVentas() {
+        return view('welcome_ventas');
+    }
+
+    public function metodoWelcomeAlmacen() {
+        return view('welcome_almacen');
+    }
 }

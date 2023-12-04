@@ -11,6 +11,7 @@
         <div style="text-align: left; flex: 1;">
             <h1 style="font-size: 2.5rem; color: #17a2b8;">Bienvenido, usuario</h1>
             <h1 style="font-size: 2rem; color: #17a2c9;">Plataforma de administración de Importaciones BEASTMEX</h1>
+            <h1 style="font-size: 1.5rem; color: #17a2c9;"><i>Gerencia</i></h1>
             <br>
             <p style="font-size: 1.2rem; text-align: justify;">La empresa ha establecido alianzas 
                 estratégicas con fabricantes líderes a nivel mundial y expandiendo su presencia en todo México y América Latina. 
