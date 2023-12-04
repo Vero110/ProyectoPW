@@ -25,7 +25,8 @@ class validadorProveedores extends FormRequest
             'txtNombre' => 'required|min:3',
             'txtEmpresa' => 'required|min:3',
             'txtTelefono' => 'required|numeric',
-            'txtCorreo' => 'required|email'
+            'txtCorreo' => 'required|email',
+            'txtEstatus' => 'required'
         ];
     }
 }

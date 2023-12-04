@@ -3,7 +3,7 @@
 @section('titulo', 'Consulta de Productos')
 
 @section('Contenido')
-<div class="container">
+<div class="container mt-5 col-md-10 mb-4">
     <br>
     <br>
     <div class="row justify-content-center">

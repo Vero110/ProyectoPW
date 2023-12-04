@@ -3,10 +3,12 @@
 @section('titulo', 'Consulta de Usuarios')
 
 @section('Contenido')
-<div class="container">
-    <br>
-    <br>
-    <br>
+
+@foreach ($consultarUsu as $item)
+    
+
+<div class="container mt-5 col-md-8 mb-4">
+    
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
@@ -15,17 +17,26 @@
                 </div>
                 <div class="card-body">
                     <table class="table table-striped-columns">
-                        <thead>
-                            <tr>
-                              <th scope="col">Nombre</th>
-                              <th scope="col">Apellido P</th>
-                              <th scope="col">Apellido M</th>
-                              <th scope="col">Correo</th>
-                              <th scope="col">Puesto</th>
-                              <th scope="col">Contraseña</th>
-                        
-                            </tr>
-                          </thead>
+                            <thead>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Apellido P</th>
+                                    <th scope="col">Apellido M</th>
+                                    <th scope="col">Correo</th>
+                                    <th scope="col">Puesto</th>
+                                    <th scope="col">Contraseña</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>{{$item->nombre}}</td>
+                                    <td>{{$item->ap}}</td>
+                                    <td>{{$item->am}}</td>
+                                    <td>{{$item->correo}}</td>
+                                    <td>{{$item->puesto}}</td>
+                                    <td>{{$item->contraseña}}</td>
+                                </tr>
+                            </tbody>
                       </table>
                     <br>
                     
@@ -34,14 +45,7 @@
             </div>
         </div>
     </div>
+    @endforeach
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 @endsection

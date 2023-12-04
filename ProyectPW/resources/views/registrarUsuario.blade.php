@@ -27,7 +27,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="Registrarusuario">
+                    <form method="POST" action="/registrarusuario">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Agregar un nuevo Usuario:</h2>

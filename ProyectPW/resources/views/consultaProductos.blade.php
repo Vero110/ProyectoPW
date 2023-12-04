@@ -3,7 +3,10 @@
 @section('titulo', 'Consulta de Productos')
 
 @section('Contenido')
-<div class="container">
+
+@foreach ($consultarProd as $item)
+
+<div class="container mt-5 col-md-10 mb-4">
     <br>
     <br>
     <br>
@@ -17,35 +20,37 @@
                     <table class="table table-striped-columns">
                         <thead>
                             <tr>
-                              <th scope="col">No. de Serie</th>
-                              <th scope="col">Nombre</th>
-                              <th scope="col">Marca</th>
-                              <th scope="col">Cantidad</th>
-                              <th scope="col">Costo de compra</th>
-                              <th scope="col">Costo de venta</th>
-                              <th scope="col">Fecha</th>
-                              <th scope="col">Acciones</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">No. de Serie</th>
+                                <th scope="col">Marca</th>
+                                <th scope="col">Cantidad</th>
+                                <th scope="col">Costo de compra</th>
+                                <th scope="col">Costo de venta</th>
+                                <th scope="col">Fecha</th>
+                                <th scope="col">Estatus</th>
+                                <th scope="col">Foto</th>
                             </tr>
-                          </thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{$item->nombre}}</td>
+                                <td>{{$item->noserie}}</td>
+                                <td>{{$item->marca}}</td>
+                                <td>{{$item->cantidad}}</td>
+                                <td>{{$item->costo}}</td>
+                                <td>.</td>
+                                <td>{{$item->fecha}}</td>
+                                <td>{{$item->estatus}}</td>
+                                <td>{{$item->foto}}</td>
+                            </tr>
+                        </tbody>
                       </table>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 @endsection
 
             
