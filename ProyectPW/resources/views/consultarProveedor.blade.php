@@ -3,10 +3,10 @@
 @section('titulo', 'Consulta de Proveedor')
 
 @section('Contenido')
-<div class="container">
-    <br>
-    <br>
-    <br>
+
+@foreach ($consultarProv as $item)
+
+<div class="container mt-5 col-md-8 mb-4">
     <div class="row justify-content-center">
         <div class="col-md-9">
             <div class="card">
@@ -17,29 +17,28 @@
                     <table class="table table-striped-columns">
                         <thead>
                             <tr>
-                              <th scope="col">Nombre</th>
-                              <th scope="col">Empresa</th>
-                              <th scope="col">Telefono</th>
-                              <th scope="col">Correo</th>
-                        
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Empresa</th>
+                                <th scope="col">Telefono</th>
+                                <th scope="col">Correo</th>
+                                <th scope="col">Estatus</th>
                             </tr>
-                          </thead>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>{{$item->nombre}}</td>
+                                <td>{{$item->empresa}}</td>
+                                <td>{{$item->telefono}}</td>
+                                <td>{{$item->correo}}</td>
+                                <td>{{$item->estatus}}</td>
+                            </tr>
+                        </tbody>
                       </table>
-                    <br>
-                    
-                
                 </div>
             </div>
         </div>
     </div>
+    @endforeach
 </div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 @endsection

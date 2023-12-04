@@ -27,7 +27,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="RegistrarPro">
+                    <form method="POST" action="/registrarproveedores">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Agregar un nuevo Proveedor:</h2>
@@ -54,6 +54,12 @@
                                 <input type="text" name="txtCorreo" class="form-control" value="{{ old('txtCorreo') }}">
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtCorreo') }}</p>
                             </div>
+
+                            <div class="mb-3">
+                                <label for="txtEstatus" class="form-label">Estatus:</label>
+                                <input type="text" name="txtEstatus" class="form-control" value="{{ old('txtEstatus') }}">
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtEstatus') }}</p>
+                            </div>                            
 
                         </div>
                         <div class="card-footer text-body-secondary text-center">

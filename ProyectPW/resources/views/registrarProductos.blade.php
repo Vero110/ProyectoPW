@@ -27,7 +27,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card border-info">
-                    <form method="POST" action="RegistrarP">
+                    <form method="POST" action="/registrarproducto">
                         @csrf
                         <div class="card-body">
                             <h2 class="card-text text-center">Ingresar un producto:</h2>
@@ -63,8 +63,14 @@
 
                             <div class="mb-3">
                                 <label for="txtFechaIngreso" class="form-label">Fecha de Ingreso:</label>
-                                <input type="text" name="txtFechaIngreso" class="form-control" value="{{ old('txtFechaIngreso') }}" >
+                                <input type="date" name="txtFechaIngreso" class="form-control" value="{{ old('txtFechaIngreso') }}" >
                                 <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtFechaIngreso') }}</p>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="txtEstatus" class="form-label">Estatus:</label>
+                                <input type="text" name="txtEstatus" class="form-control" value="{{ old('txtEstatus') }}">
+                                <p class="text-danger fst-italic fw-bold">{{ $errors->first('txtEstatus') }}</p>
                             </div>
 
                             <div class="mb-3">

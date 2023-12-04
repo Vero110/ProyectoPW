@@ -6,9 +6,6 @@
     <li class="nav-item">
         <a class="nav-link actived" href="/ordencompra">Órdenes de compra</a>
       </li>
-    <li class="nav-item">
-        <a class="nav-link actived" href="/ventas">Ventas</a>
-      </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -20,10 +17,11 @@
 
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-          Consultar Ventas
+          Ventas
         </a>
      <div class="dropdown-menu">
-      <a class="dropdown-item" href="">Ventas</a>
+      <a class="dropdown-item" href="/ventas">Registrar</a>
+        <a class="dropdown-item" href="#">Consultar</a>
        </div>
   </li>
 
@@ -32,9 +30,9 @@
             Productos
           </a>
        <div class="dropdown-menu">
-        <a class="dropdown-item" href="registroproductos">Registrar</a>
+        <a class="dropdown-item" href="/registroproductos/create">Registrar</a>
         <a class="dropdown-item" href="editarproducto">Editar</a>
-        <a class="dropdown-item" href="consultaproductos">Consultar</a>
+        <a class="dropdown-item" href="/consultaproductos">Consultar</a>
         <a class="dropdown-item" href="consultaxnombreProductos">Consultar por nombre</a>
       </div>
     </li>
@@ -43,9 +41,9 @@
             Proveedores
           </a>
             <div class="dropdown-menu">
-            <a class="dropdown-item" href="agregarproveedor">Registrar</a>
+            <a class="dropdown-item" href="/registroproveedores/create">Registrar</a>
             <a class="dropdown-item" href="editarproveedor">Editar</a>
-            <a class="dropdown-item" href="consultaproveedores">Consultar</a>
+            <a class="dropdown-item" href="/consultaproveedores">Consultar</a>
             <a class="dropdown-item" href="consultaxnombreProveedores">Consultar por nombre</a>
             </div>
       </li>
@@ -54,9 +52,9 @@
             Usuarios
           </a>
          <div class="dropdown-menu">
-          <a class="dropdown-item" href="registrousuario">Registrar</a>
+          <a class="dropdown-item" href="/registrousuario/create">Registrar</a>
           <a class="dropdown-item" href="editarusuarios">Editar</a>
-          <a class="dropdown-item" href="consultausuarios">Consultar</a>
+          <a class="dropdown-item" href="/consultausuarios">Consultar</a>
           <a class="dropdown-item" href="consultaxnombreUsuarios">Consultar por nombre</a>
         </div>
     </li>

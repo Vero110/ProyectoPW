@@ -28,6 +28,7 @@ class validadorProductos extends FormRequest
             'txtCantidad' => 'required|numeric',
             'txtCosto' => 'required|numeric',
             'txtFechaIngreso' => 'required|date',
+            'txtEstatus' => 'required',
             'txtFoto' => 'required'
         ];
     }
