@@ -7,8 +7,6 @@
 <br>
 <h3 class="display-4 text-center text-info">Generar órden de compra</h3>
 
-<br>
-<h3 class="display-4 text-center text-info">Ventas</h3>
 <script>
   @if(session()->has('confirmacion'))
   

@@ -4,8 +4,12 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\validadorProductos;
-use DB;
+#use DB;
 use Carbon\Carbon;
+use Barryvdh\DomPDF\Facade as PDF;
+use Illuminate\Support\Facades\DB;
+
+
 
 class controllerProductos extends Controller
 {
@@ -46,6 +50,39 @@ class controllerProductos extends Controller
         $nombreproducto = $request->input('txtNombre'); 
         session()->flash('confirmacion', $nombreproducto);
         return redirect('/registroproductos/create');
+    }
+
+    public function consultaProductos(validadorProductos $request)
+{
+    $query = DB::table('tb_productos');
+
+    if ($request->has('nombre')) {
+        $query->where('nombre', 'like', '%' . $request->input('nombre') . '%');
+    }
+
+    if ($request->has('noserie')) {
+        $query->where('noserie', 'like', '%' . $request->input('noserie') . '%');
+    }
+
+    $consultarProd = $query->get();
+
+    return view('consultaProductos', ['consultarProd' => $consultarProd]);
+}
+    public function exportPdf()
+    {
+    $products = DB::table('tb_productos')->get();
+
+    $pdf = PDF::loadView('products_pdf', ['products' => $products]);
+
+    return $pdf->download('products.pdf');
+    }
+    public function buscarPorNombre(validadorProductos $request)
+    {
+        $nombre = $request->input('nombre');
+
+        $productos = DB::where('nombre', 'like', '%' . $nombre . '%')->get();
+
+        return view('consultaxNombreProductos', ['productos' => $productos]);
     }
 
     /**
